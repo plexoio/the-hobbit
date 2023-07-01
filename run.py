@@ -1,3 +1,8 @@
+# Everythingh here is about createing routes and views for the differente tamplates;
+# at the same time we reuse or inherit code as seen from 'base.html' 
+# and the subsequent fetching from those templates.
+# EXPECTING MORE INFO
+
 import os
 from flask import Flask, render_template  # first import Class from module
 
@@ -16,6 +21,10 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/careers')
+def careers():
+    return render_template('careers.html')
 
 # This condition ensures that the subsequent
 # code block is only executed when run.py is the main entry point.
