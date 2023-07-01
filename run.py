@@ -1,7 +1,13 @@
 # Everythingh here is about createing routes and views for the differente tamplates;
-# at the same time we reuse or inherit code as seen from 'base.html' 
-# and the subsequent fetching from those templates.
-# EXPECTING MORE INFO
+# we reuse or inherit code as seen from 'base.html' and the subsequent fetching from those templates.
+# Pay attention to the URL linking syntax (Jinja)
+
+# We have install a template to 'static'.
+# This template has all necessary dependencies.
+# We reuse the original code in there for base.html
+# then we use our templates using the {%block/endblock%} syntax
+# there we add our own code. That will be matched with the base.html
+# remember {% extends "base.html"%} to load base.html and match our pages
 
 import os
 from flask import Flask, render_template  # first import Class from module
