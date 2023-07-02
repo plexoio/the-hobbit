@@ -3,30 +3,35 @@
         "name": "Bilbo Baggins",
         "description": "The titular character, a hobbit who is recruited by Gandalf and the dwarves to join their quest. He undergoes personal growth and transforms into a brave and resourceful adventurer.",
         "img_source": "static/img/bilbo.jpg",
-        "alt_img": "Bilbo's profile picture"
+        "alt_img": "Bilbo's profile picture",
+        "credits": "James Fisher/Warner Brothers Pictures"
     },
     {
         "name": "Gandalf the Grey",
         "description": "A wise and powerful wizard who orchestrates the adventure and provides guidance to Bilbo and the dwarves. He plays a significant role in the events of both 'The Hobbit' and 'The Lord of the Rings.'",
         "img_source": "static/img/gandalf.jpg",
-        "alt_img": "Gandalf's profile picture"
+        "alt_img": "Gandalf's profile picture",
+        "credits": "Todd Eyre/Warner Bros"
     },
     {
         "name": "Thorin Oakenshield",
         "description": "The leader of the company of dwarves and the heir to the throne of the Lonely Mountain. Thorin is determined to reclaim his homeland and can be proud and stubborn at times.",
         "img_source": "static/img/thorin.jpg",
-        "alt_img": "Thorin's profile picture"
+        "alt_img": "Thorin's profile picture",
+        "credits": "Mark Pokorny/Warner Brothers Pictures and MGM"
     },
     {
         "name": "Gollum",
         "description": "A tormented and riddle-loving creature Bilbo encounters deep within the Misty Mountains. Gollum possesses a mysterious ring that becomes a pivotal element in the story.",
         "img_source": "static/img/gollum.jpg",
-        "alt_img": "Gollum's profile picture"
+        "alt_img": "Gollum's profile picture",
+        "credits": "Warner Brothers Pictures and MGM"
     },
     {
         "name": "Smaug",
         "description": "The fearsome dragon who has taken over the dwarves' homeland, the Lonely Mountain. Smaug is a cunning and powerful adversary who guards a vast treasure hoard.",
         "img_source": "static/img/smaug.jpg",
-        "alt_img": "Smaug's profile picture"
+        "alt_img": "Smaug's profile picture",
+        "credits": "https://www.bravo.de/"
     }
 ]
