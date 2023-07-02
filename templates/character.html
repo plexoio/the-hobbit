@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block myContent %}
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img src="{{ character.img_source }}" alt="{{ character.alt_img }}" class="featurette-image image-responsive">
+        </div>
+
+        <div class="col-md-7 my-5">
+            <h3>{{ character.name }}</h3>
+            <p class="text-justify">
+                {{ character.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

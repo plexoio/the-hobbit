@@ -18,8 +18,9 @@ app = Flask(__name__)
 
 
 @app.route("/")  # ROUTE help direct the files to Flask | @(decorator)
-def index(): # VIEW
-    return render_template('index.html') # imported method from flask
+def index():  # VIEW
+    return render_template('index.html')  # imported method from flask
+
 
 @app.route("/about")
 def about():
@@ -28,13 +29,27 @@ def about():
         data = json.load(json_data)
     return render_template('about.html', page_title='About', about_content=data)
 
+
+@app.route("/about/<character_name>")
+def characterName(character_name):
+    member = {}
+    with open('data/characters.json', 'r') as json_data:
+        data = json.load(json_data)
+        for obj in data:
+            if obj['url'] == character_name:
+                member = obj
+    return render_template('character.html', character = member)
+
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html', page_title="Contact")
 
+
 @app.route('/careers')
 def careers():
     return render_template('careers.html', page_title="Careers")
+
 
 # This condition ensures that the subsequent
 # code block is only executed when run.py is the main entry point.

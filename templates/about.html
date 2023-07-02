@@ -1,7 +1,5 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block myContent%}
-
-{{ about_content[1]['name'] }}
 
 <h2>{{ page_title }}</h2>
 <p>
@@ -12,18 +10,33 @@
 </p>
 
 {% for cast in about_content %}
-
-    <div class="row featurette my-5">
-        <div class="col-md-7">
-            <h3>{{ cast.name }}</h3>
-            <p>{{ cast.description }}</p>
-            <small>Image credits<br>{{ cast.credits }}</small>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ cast.img_source }}" alt="{{ cast.alt_img }}" class="featurette-image image-responsive">
-        </div>
+{% if loop.index % 2 != 0 %}
+<div class="row featurette my-5">
+    <div class="col-md-7">
+        <h3><a href="/about/{{cast.url}}">{{ loop.index }}. {{ cast.name }}</a></h3>
+        <p class="text-justify">{{ cast.description }}</p>
+        <small>Image credits<br>{{ cast.credits }}</small>
     </div>
-    <hr class="featurette-divider">
+    <div class="col-md-5">
+        <img src="{{ cast.img_source }}" alt="{{ cast.alt_img }}" class="featurette-image image-responsive">
+    </div>
+</div>
+{% else %}
+<div class="row featurette my-5">
+    <div class="col-md-5">
+        <img src="{{ cast.img_source }}" alt="{{ cast.alt_img }}" class="featurette-image image-responsive">
+    </div>
+    <div class="col-md-7">
+        <h3><a href="/about/{{cast.url}}">{{ loop.index }}. {{ cast.name }}</a></h3>
+        <p class="text-justify">{{ cast.description }}</p>
+        <small>Image credits<br>{{ cast.credits }}</small>
+    </div>
+</div>
+{% endif %}
+
+{% if loop.index != loop.length %}
+<hr class="featurette-divider">
+{% endif%}
 {% endfor %}
 
 {%endblock%}
