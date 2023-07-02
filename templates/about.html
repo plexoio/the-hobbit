@@ -1,4 +1,34 @@
 {% extends "base.html"%}
 {% block myContent%}
-    <h1>About page</h1>
+<h2>{{ page_title }}</h2>
+<p>
+    The Hobbit" is a fantasy novel by J.R.R. Tolkien that tells the story of Bilbo Baggins, a hobbit who joins a group
+    of dwarves on a quest to reclaim their homeland from a dragon. Throughout their journey, they encounter various
+    challenges and adversaries while Bilbo discovers courage and resourcefulness within himself. The novel is set in the
+    enchanting world of Middle-earth and serves as a prequel to Tolkien's epic trilogy, "The Lord of the Rings.
+</p>
+
+<div class="row featurette my-5">
+    <div class="col-md-7">
+        <h3>Bilbo Baggins</h3>
+        <p>The titular character, a hobbit who is recruited by Gandalf and the dwarves to join their quest. He undergoes
+            personal growth and transforms into a brave and resourceful adventurer.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{url_for('static', filename='img/bilbo.jpg')}}" alt="Bilbo profile pic">
+    </div>
+</div>
+
+<div class="row featurette my-5">
+    <div class="col-md-5">
+        <img src="{{url_for('static', filename='img/gandalf.jpg')}}" alt="">
+    </div>
+    <div class="col-md-7">
+        <h3>Gandalf the Grey</h3>
+        <p>
+            A wise and powerful wizard who orchestrates the adventure and provides guidance to Bilbo and the
+            dwarves. He plays a significant role in the events of both "The Hobbit" and "The Lord of the Rings."
+        </p>
+    </div>
+</div>
 {%endblock%}
