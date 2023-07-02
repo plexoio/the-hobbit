@@ -10,6 +10,7 @@
 # remember {% extends "base.html"%} to load base.html and match our pages
 
 import os
+import json
 from flask import Flask, render_template  # first import Class from module
 
 # instance of the class passing __name__ (provides current module or script)
@@ -22,7 +23,10 @@ def index(): # VIEW
 
 @app.route("/about")
 def about():
-    return render_template('about.html', page_title="About")
+    data = []
+    with open('data/characters.json', 'r') as json_data:
+        data = json.load(json_data)
+    return render_template('about.html', page_title='About', about_content=data)
 
 @app.route('/contact')
 def contact():

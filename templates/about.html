@@ -1,5 +1,8 @@
 {% extends "base.html"%}
 {% block myContent%}
+
+{{ about_content[1]['name'] }}
+
 <h2>{{ page_title }}</h2>
 <p>
     The Hobbit" is a fantasy novel by J.R.R. Tolkien that tells the story of Bilbo Baggins, a hobbit who joins a group
@@ -8,27 +11,18 @@
     enchanting world of Middle-earth and serves as a prequel to Tolkien's epic trilogy, "The Lord of the Rings.
 </p>
 
-<div class="row featurette my-5">
-    <div class="col-md-7">
-        <h3>Bilbo Baggins</h3>
-        <p>The titular character, a hobbit who is recruited by Gandalf and the dwarves to join their quest. He undergoes
-            personal growth and transforms into a brave and resourceful adventurer.</p>
-    </div>
-    <div class="col-md-5">
-        <img src="{{url_for('static', filename='img/bilbo.jpg')}}" alt="Bilbo profile pic">
-    </div>
-</div>
+{% for cast in about_content %}
 
-<div class="row featurette my-5">
-    <div class="col-md-5">
-        <img src="{{url_for('static', filename='img/gandalf.jpg')}}" alt="">
+    <div class="row featurette my-5">
+        <div class="col-md-7">
+            <h3>{{ cast.name }}</h3>
+            <p>{{ cast.description }}</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ cast.img_source }}" alt="{{ cast.alt_img }}" class="featurette-image image-responsive">
+        </div>
     </div>
-    <div class="col-md-7">
-        <h3>Gandalf the Grey</h3>
-        <p>
-            A wise and powerful wizard who orchestrates the adventure and provides guidance to Bilbo and the
-            dwarves. He plays a significant role in the events of both "The Hobbit" and "The Lord of the Rings."
-        </p>
-    </div>
-</div>
+    <hr class="featurette-divider">
+{% endfor %}
+
 {%endblock%}
