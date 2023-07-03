@@ -4,6 +4,14 @@ Our app has custom routing, template logic, and a JSON data store.
 ## Preview Link:
 https://hobbit-5406e2406d1c.herokuapp.com/
 
+## Important:
+1. The first thing that we need to do is to create our Heroku app.
+2. The second thing is to either link our local Git repository with Heroku, or setup Automatic
+Deployment from GitHub.
+3. The third thing, is to create a requirements.txt file, which will install the dependencies
+for our project, and tell Heroku that we're using Python.
+4. And then finally, the fourth thing is to create a Procfile.
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,
