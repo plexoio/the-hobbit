@@ -11,11 +11,14 @@
 
 import os
 import json
-from flask import Flask, render_template  # first import Class from module
+from flask import Flask, render_template, request, flash # first import Class from module
+
+if os.path.exists('env.py'):
+    import env
 
 # instance of the class passing __name__ (provides current module or script)
 app = Flask(__name__)
-
+app.secret_key = os.environ.get('SECRET_PASS')
 
 @app.route("/")  # ROUTE help direct the files to Flask | @(decorator)
 def index():  # VIEW
@@ -41,8 +44,14 @@ def characterName(character_name):
     return render_template('character.html', character = member)
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        print(request.form) # will print all form 200
+        print(request.form['email']) # will throw 'Exception' if 404
+        print(request.form.get('name')) # will throw 'None' if 404
+        flash('Thanks {}, your message has been set successfully'.format(
+            request.form.get('name')))
     return render_template('contact.html', page_title="Contact")
 
 
