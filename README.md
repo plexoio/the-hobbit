@@ -1,10 +1,10 @@
 We've gone from a very basic Hello World! application, to a fully fledged web app.
 Our app has custom routing, template logic, and a JSON data store.
 
-## Preview Link:
+## Preview Link
 https://hobbit-5406e2406d1c.herokuapp.com/
 
-## Important:
+## Important
 1. The first thing that we need to do is to create our Heroku app.
 2. The second thing is to either link our local Git repository with Heroku, or setup Automatic
 Deployment from GitHub.
