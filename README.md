@@ -12,6 +12,15 @@ Deployment from GitHub.
 for our project, and tell Heroku that we're using Python.
 4. And then finally, the fourth thing is to create a Procfile.
 
+## Tech | Python
+
+1. Flask Framework
+2. jinja2 templating
+3. Flask and Data
+4. Routing
+5. Render_template, request & flash
+6. Flashed messages
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,
